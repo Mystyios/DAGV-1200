@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: SimpleChair.ma
-//Last modified: Tue, Jan 23, 2024 06:07:35 PM
+//Last modified: Tue, Jan 23, 2024 06:45:47 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.4.1";
@@ -11,18 +11,18 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22621)";
-fileInfo "UUID" "F61C29CD-456A-FA5E-7287-819DAF8641C9";
+fileInfo "UUID" "12B31620-4D8B-8B33-29B3-21989E88E8BD";
 createNode transform -s -n "persp";
 	rename -uid "2AC7880D-4EF1-5EB5-80D2-63848C964293";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.21288499099178 3.6526330992947424 11.909779475483907 ;
-	setAttr ".r" -type "double3" -10.199999999999525 371.59999999996717 -2.0292945097658535e-16 ;
+	setAttr ".t" -type "double3" 6.1275722459464772 2.8976173867636876 -3.9535195693562555 ;
+	setAttr ".r" -type "double3" -15.599999999998063 481.59999999995165 0 ;
 	setAttr ".rpt" -type "double3" 1.0343738989641778e-16 2.9077628785781347e-18 7.4561743830086285e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "0860A396-4BDD-F49B-7424-6ABD3FDD1975";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 12.40616151781752;
+	setAttr ".coi" 7.1873688853351121;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1548,20 +1548,20 @@ createNode mesh -n "pCylinderShape8" -p "pCylinder8";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "7D858485-44DB-26B9-83C8-8A9714398186";
+	rename -uid "C9A75C9F-45E7-B6E3-9D37-AF84E70A76BD";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "E21714B7-413D-B34F-07EC-7490D576C836";
+	rename -uid "2D0100C1-4B6E-3B79-0064-0AAE6596099F";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "76644EB0-4058-6D38-808D-9284E8114F7F";
+	rename -uid "ED6D5D70-4799-0843-D843-B288ACF40A8F";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "F0A5E9FB-4C9B-6845-2E2E-EF988EA61279";
+	rename -uid "9D5C594D-4819-7D3F-00AA-34B8F933394D";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "8F114A12-42BB-DB8F-7B54-F18E7FEDF39D";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "CB9D9571-4EA0-F660-60F8-149AAD526311";
+	rename -uid "1FEE201B-4F62-E277-2622-F798326121FB";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "F7F1CC3B-45BA-58A7-7B92-B599AD8874CE";
 	setAttr ".g" yes;
@@ -1614,9 +1614,6 @@ createNode polyBevel3 -n "polyBevel2";
 	setAttr ".mv" yes;
 	setAttr ".mvt" 0.0001;
 	setAttr ".sa" 30;
-createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "27C03F0C-4D4A-C802-B68C-BDBBF78A14FE";
-	setAttr ".sst" -type "string" "";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "D1C0175F-493E-42E5-0679-379FABCCF4BA";
 	setAttr ".b" -type "string" (
@@ -1664,6 +1661,9 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "F4C9D2D2-4A8D-4C8F-1D4A-7680C097AA73";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
+createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
+	rename -uid "FC33E562-451F-E1EF-14B7-CF82D6906986";
+	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
