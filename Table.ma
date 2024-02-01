@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Table.ma
-//Last modified: Fri, Jan 26, 2024 03:36:05 PM
+//Last modified: Fri, Jan 26, 2024 03:50:50 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.4.1";
@@ -11,12 +11,12 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22621)";
-fileInfo "UUID" "BFD99190-4D5E-B54F-9407-1995CFD278FE";
+fileInfo "UUID" "65A38078-4B48-1912-8F27-58BD8B17F407";
 createNode transform -s -n "persp";
 	rename -uid "1C6B2F3C-4C03-8EDD-C18D-AD89DF6CBB00";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -7.5844755539911306 4.6181035451457397 6.5930840123759191 ;
-	setAttr ".r" -type "double3" -19.800000000000004 -49.000000000000028 0 ;
+	setAttr ".t" -type "double3" 5.9041622191472722 4.1940993158290532 -8.3079633260906647 ;
+	setAttr ".r" -type "double3" -17.400000000000141 144.59999999999977 0 ;
 	setAttr ".rpt" -type "double3" -3.8816942055607999e-16 1.1571924313265348e-16 -1.6182772836976566e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E001160C-4465-6D04-3104-C1A80F4AFE8B";
@@ -547,20 +547,20 @@ createNode mesh -n "pCubeShape9" -p "pCube9";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "F070E2BA-451D-03E1-843E-E99EDBF970C7";
+	rename -uid "A68E3589-4224-F4FC-5A15-3C9374777E52";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "DCCBC871-4D78-C6A2-E972-30A6F9DAA95C";
+	rename -uid "84BE3979-4D26-1DEC-A814-C79B0C7642BD";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "0E51121A-4931-106E-CD27-9FB118568288";
+	rename -uid "33224C47-48D2-3447-4357-A1B5B975F499";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "415B2A19-4B40-485E-5A7B-BD9136E73756";
+	rename -uid "BF859344-4EF6-23C6-31C0-AF85CB0DFD11";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "F848AFD4-4447-9883-95C7-AF8EA5581BD3";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "0CBF5137-43C0-135F-D894-1D99F7E619DB";
+	rename -uid "05EDF34B-429B-4CEC-8E5B-7F8F5B5039AB";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "00CE5F8E-4D05-8234-A196-688486F5C968";
 	setAttr ".g" yes;
@@ -687,7 +687,7 @@ createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "CF811829-4416-B363-7790-1A816333ADD2";
+	rename -uid "1563430E-466A-1D05-EAEB-7E8223A55E49";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 1;

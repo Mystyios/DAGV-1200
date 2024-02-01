@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: SimpleHammer.ma
-//Last modified: Tue, Jan 23, 2024 06:41:43 PM
+//Last modified: Fri, Jan 26, 2024 04:00:28 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.4.1";
@@ -11,19 +11,19 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22621)";
-fileInfo "UUID" "7C8AFC89-4E56-C181-AD51-BD9EB44FC23E";
+fileInfo "UUID" "B1AF8511-4303-87B0-F77E-BFB37F87E758";
 createNode transform -s -n "persp";
 	rename -uid "10C9477E-4FAB-DE49-86CA-9AA8FF4B1F4B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -15.19161333248573 16.856796363837049 -14.734106709294835 ;
-	setAttr ".r" -type "double3" -31.199999999991341 225.79999999999404 0 ;
+	setAttr ".t" -type "double3" -17.488791137233481 9.9925701326447331 9.2598850487605624 ;
+	setAttr ".r" -type "double3" -16.800000000021747 297.79999999999205 -3.409783221005689e-15 ;
 	setAttr ".rp" -type "double3" -1.3877787807814457e-17 0 -4.4408920985006262e-16 ;
 	setAttr ".rpt" -type "double3" -2.9815866056245954e-16 -9.4834043007004692e-17 7.4269421559549875e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "11313A92-4A8E-C073-6397-04BE5D321A69";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 24.773523907056024;
+	setAttr ".coi" 20.652150846746871;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -132,11 +132,9 @@ createNode mesh -n "pCubeShape1" -p "transform1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 7 ".pt";
-	setAttr ".pt[2]" -type "float3" 0.067400724 -0.045234516 0 ;
-	setAttr ".pt[3]" -type "float3" -0.067400716 -0.045234516 0 ;
-	setAttr ".pt[4]" -type "float3" 0.067400724 -0.045234516 0 ;
-	setAttr ".pt[5]" -type "float3" -0.067400716 -0.045234516 0 ;
+	setAttr -s 4 ".pt[2:5]" -type "float3"  0.067400724 -0.045234516 
+		0 -0.067400716 -0.045234516 0 0.067400724 -0.045234516 0 -0.067400716 -0.045234516 
+		0;
 createNode transform -n "pCube2";
 	rename -uid "F99640BB-41CB-24B8-6EE9-7C97B7B88714";
 	setAttr ".t" -type "double3" -0.2 0.25695849988533009 -1.0007957777442826 ;
@@ -399,20 +397,20 @@ createNode mesh -n "pCylinder3Shape" -p "pCylinder3";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "EA92BD9D-4B6A-3928-5A6A-488AC53805CE";
+	rename -uid "4D5475B8-4AB2-B4AF-237F-37BB8B068795";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "9DAA1E71-46FC-8159-BB06-29971833A719";
+	rename -uid "7DDBA236-4D9A-DA9A-A9E1-1E8FE253AECA";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "1F9CDC0E-4B49-0ECA-0D1F-4EB7D4D5DC00";
+	rename -uid "AA263CB3-407E-8223-F055-6CBD291D3EA7";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "F0739763-46EA-AF4A-8A20-6EA649A1A213";
+	rename -uid "8ED52EAE-4F67-F156-9ACA-EEB05C59BC9C";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "6DB82532-436E-3F4E-97E4-ABBD8D22FA0D";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "6F7B0F76-414A-D480-4B4C-7B8BCA9CB3FA";
+	rename -uid "C4EA5C9E-47F2-53A9-4E13-F0A9F586405A";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "0C7059EC-4092-0DAF-EE89-FC9C38F9E6BB";
 	setAttr ".g" yes;
@@ -566,7 +564,7 @@ createNode polyExtrudeFace -n "polyExtrudeFace2";
 createNode polyTweak -n "polyTweak2";
 	rename -uid "8FF57003-4C46-7501-EE38-0EB110E1A65A";
 	setAttr ".uopa" yes;
-	setAttr -s 103 ".tk";
+	setAttr -s 101 ".tk";
 	setAttr ".tk[20]" -type "float3" 0 0.090637133 0 ;
 	setAttr ".tk[21]" -type "float3" 0 0.090637133 0 ;
 	setAttr ".tk[22]" -type "float3" 0 0.090637133 0 ;
@@ -749,19 +747,12 @@ createNode polySplitRing -n "polySplitRing6";
 createNode polyTweak -n "polyTweak4";
 	rename -uid "F1291DDC-4078-1AB4-99F5-84A4E6CFE37A";
 	setAttr ".uopa" yes;
-	setAttr -s 13 ".tk";
-	setAttr ".tk[4]" -type "float3" 0.21119943 -1.8734895 4.4408921e-16 ;
-	setAttr ".tk[5]" -type "float3" -0.21119943 -1.8734895 4.4408921e-16 ;
-	setAttr ".tk[6]" -type "float3" 0.21119943 -1.4510907 4.4408921e-16 ;
-	setAttr ".tk[7]" -type "float3" -0.21119943 -1.4510907 4.4408921e-16 ;
-	setAttr ".tk[8]" -type "float3" -0.040190399 -0.040190399 0 ;
-	setAttr ".tk[9]" -type "float3" 0.040190399 -0.040190399 0 ;
-	setAttr ".tk[10]" -type "float3" 0.040190399 0.040190399 0 ;
-	setAttr ".tk[11]" -type "float3" -0.040190399 0.040190399 0 ;
-	setAttr ".tk[12]" -type "float3" -0.12756924 -0.29222208 4.35515e-09 ;
-	setAttr ".tk[13]" -type "float3" 0.12756924 -0.29222208 4.35515e-09 ;
-	setAttr ".tk[14]" -type "float3" 0.12756924 -0.0370836 -4.35515e-09 ;
-	setAttr ".tk[15]" -type "float3" -0.12756924 -0.0370836 -4.35515e-09 ;
+	setAttr -s 12 ".tk[4:15]" -type "float3"  0.21119943 -1.8734895 4.4408921e-16
+		 -0.21119943 -1.8734895 4.4408921e-16 0.21119943 -1.45109069 4.4408921e-16 -0.21119943
+		 -1.45109069 4.4408921e-16 -0.040190399 -0.040190399 0 0.040190399 -0.040190399 0
+		 0.040190399 0.040190399 0 -0.040190399 0.040190399 0 -0.12756924 -0.29222208 4.35515e-09
+		 0.12756924 -0.29222208 4.35515e-09 0.12756924 -0.0370836 -4.35515e-09 -0.12756924
+		 -0.0370836 -4.35515e-09;
 createNode polyCylinder -n "polyCylinder2";
 	rename -uid "A4222AB2-471A-AB78-4E14-CEAE86880901";
 	setAttr ".sc" 1;
@@ -894,7 +885,7 @@ createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "1DD8B8A3-40C3-2309-3043-EF9FFB6334BB";
+	rename -uid "8D6C4C48-4623-D59E-3B4A-EE910ACD389B";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 1;
