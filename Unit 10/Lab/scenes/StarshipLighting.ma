@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
-//Name: StarshipUV.ma
-//Last modified: Sat, Apr 13, 2024 08:09:23 PM
+//Name: StarshipLighting.ma
+//Last modified: Sat, Apr 13, 2024 08:12:16 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiSkyDomeLight"
@@ -12,18 +12,18 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "C5B04968-4488-12DA-8AF6-E8BA5F8CF559";
+fileInfo "UUID" "1464EAB5-4289-BF55-7949-709F1240F125";
 createNode transform -s -n "persp";
 	rename -uid "1723318B-4C5A-4E0F-44A9-3180D93ACC0A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 15.879465340772091 9.9406623782764925 14.719111369424919 ;
-	setAttr ".r" -type "double3" -22.80000000000036 52.399999999996524 0 ;
+	setAttr ".t" -type "double3" 15.875525795345943 8.8380316702222821 15.639393425270494 ;
+	setAttr ".r" -type "double3" -19.200000000000756 46.799999999998064 -1.1615543524753176e-15 ;
 	setAttr ".rpt" -type "double3" -8.1950843571525275e-16 2.605239058554376e-15 3.3187083394682164e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D1FE586D-440C-036F-454A-37AD65E37A6C";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 24.023040137254441;
+	setAttr ".coi" 24.023040137254711;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -17163,10 +17163,10 @@ createNode aiPhysicalSky -n "aiPhysicalSky1";
 createNode aiPhysicalSky -n "aiPhysicalSky2";
 	rename -uid "568B1745-4CA1-2175-5F65-7F8063F2A9F5";
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "68A5B32A-4CD6-21C7-4E0F-5BA9D84FDDBA";
+	rename -uid "D47FB503-4B7C-CF15-58CF-76A7D694B5BE";
 	setAttr ".sst" -type "string" "";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "1C4B1B4F-4E58-1FEB-A282-98A666615F74";
+	rename -uid "70B3E008-4978-3438-C3BB-C58E74D2E398";
 	setAttr -s 9 ".tgi";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -968.6812801893816 -592.85711929911679 ;
@@ -18682,4 +18682,4 @@ connectAttr "directionalLight1.iog" ":defaultLightSet.dsm" -na;
 connectAttr "areaLight1.iog" ":defaultLightSet.dsm" -na;
 connectAttr "areaLight2.iog" ":defaultLightSet.dsm" -na;
 connectAttr "aiSkyDomeLight1.iog" ":defaultLightSet.dsm" -na;
-// End of StarshipUV.ma
+// End of StarshipLighting.ma
